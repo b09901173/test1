@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Homework3</title>
+	<style type="text/css">
+		a:hover {color:#FF0000;} 
+  </style>
+	<link rel="icon" href="icon.ico"><link/>
+	<audio src="music.mp3" loop autoplay controls></audio>
+</head>
+<body onload="time()">
+	<h3>你好，我是黃紹辰</h3>
+	<ul>
+		<li>2020年畢業於<a href="https://www.hs.ntnu.edu.tw/">師大附中</a></li>
+		<img src="photo.jpg"/>
+		<li>現在就讀於<a href="https://web.ee.ntu.edu.tw/">臺大電機系</a></li>
+		<img src="unnamed.jpg"/>
+		<li>平常的興趣是：</li>
+		<ul>
+			<li>打羽球，最喜歡的球星是<a href="https://zh.wikipedia.org/zh-tw/%E5%91%A8%E5%A4%A9%E6%88%90">周天成</a></li>
+			<li>看YouTube，最喜歡的頻道是<a href="https://www.youtube.com/channel/UCLW_SzI9txZvtOFTPDswxqg">木曜4超玩</a></li>
+			<li>聽歌，<a href="https://zh.wikipedia.org/zh-tw/%E6%9E%97%E4%BF%8A%E6%9D%B0">林俊傑</a>是我喜歡的歌手之一</li>
+		</ul>
+	</ul>
+	<span id="current"></span>
+</body>
+</html>
+<script>
+function time(){
+	NowDate=new Date();
+	year=NowDate.getFullYear();
+	month=NowDate.getMonth()+1;
+	day=NowDate.getDate();
+	hr=NowDate.getHours();
+	min=NowDate.getMinutes();
+	sec=NowDate.getSeconds();　
+	document.getElementById('current').innerHTML = month+'-'+day+'-'+year+' '+hr+':'+min+':'+sec;
+	setTimeout('time()',1000);
+}
+</script>
